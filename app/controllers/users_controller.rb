@@ -19,6 +19,15 @@ class UsersController < ApplicationController
   get '/users/:slug' do
     @user = User.find(params[:slug])
     erb :'/user/show'
+    if !logged_in?
+      erb :'/users/signup'
+    else
+      redirect '/tweets'
+    end
+  end
+
+  get '/login' do
+    erb :'/users/login'
   end
 
   post '/signup' do
@@ -46,7 +55,6 @@ class UsersController < ApplicationController
       session.clear
       redirect '/login'
   end
-
 
 
 end

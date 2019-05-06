@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20190505182655) do
 
   create_table "tweets", force: :cascade do |t|
     t.string  "content"
     t.integer "user_id"
+=======
+ActiveRecord::Schema.define(version: 20190503131211) do
+
+  create_table "tweets", force: :cascade do |t|
+    t.string "content"
+>>>>>>> ae7c0b57603c2c0425d2e0afe82277562c8a12a4
   end
 
   create_table "users", force: :cascade do |t|
