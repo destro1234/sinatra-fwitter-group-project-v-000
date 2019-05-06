@@ -26,9 +26,7 @@ class UsersController < ApplicationController
     end
   end
 
-  get '/login' do
-    erb :'/users/login'
-  end
+
 
   post '/signup' do
     if params[:username].empty? || params[:email].empty? || params[:password].empty?
